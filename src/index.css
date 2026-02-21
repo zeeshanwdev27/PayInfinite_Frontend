@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500');
+@import "tailwindcss";
+
+
+
+/* This makes Montserrat Alternates the default font for your whole app */
+@layer base {
+  body {
+    font-family: "Montserrat Alternates", system-ui, sans-serif;
+  }
+}
+
+
+
+@theme {
+  --color-primary: rgba(255, 255, 255, 0.15);
+  --color-primary-hover: #D97E00;
+}
+
+:root {
+  --primary-btn-gradient: linear-gradient(to right, #EBA62B, #147CCE);
+}
+
+.primary-btn {
+  background: var(--primary-btn-gradient);
+  color: white;
+}
