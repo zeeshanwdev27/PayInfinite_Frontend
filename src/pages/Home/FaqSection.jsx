@@ -5,34 +5,43 @@ import { Faqs } from "@/data/CardsData.js";
 function FaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  // ✅ Industry-standard motion constants
+  const EASE_OUT = [0.16, 1, 0.3, 1];
+  const EASE_IN_OUT = [0.4, 0, 0.2, 1];
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.12, duration: 0.6 },
+      transition: {
+        duration: 0.35,
+        ease: EASE_OUT,
+        staggerChildren: 0.07, // ✅ tighter stagger
+        delayChildren: 0.05,
+      },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 24, opacity: 0 },
+    hidden: { y: 16, opacity: 0 }, // ✅ smaller travel = smoother
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 0.38, ease: EASE_OUT },
     },
   };
 
-  // ✅ smoother than height:auto (prevents shaking)
+  // ✅ Smooth accordion without height:auto (prevents shaking)
   const answerVariants = {
     closed: {
       opacity: 0,
-      clipPath: "inset(0 0 100% 0)", // hides vertically
-      transition: { duration: 0.2, ease: "easeInOut" },
+      clipPath: "inset(0 0 100% 0)",
+      transition: { duration: 0.2, ease: EASE_IN_OUT },
     },
     open: {
       opacity: 1,
       clipPath: "inset(0 0 0% 0)",
-      transition: { duration: 0.3, ease: "easeOut" },
+      transition: { duration: 0.26, ease: EASE_IN_OUT },
     },
   };
 
@@ -78,14 +87,14 @@ function FaqSection() {
                   <motion.div
                     key={index}
                     variants={itemVariants}
-                    layout="position" // ✅ smooth reflow without weird width jumps
+                    layout="position"
+                    transition={{ layout: { duration: 0.2, ease: EASE_IN_OUT } }} // ✅ faster reflow
                     className="cursor-pointer w-full rounded-2xl px-5 sm:px-6 py-4 sm:py-5
                                bg-white/5 backdrop-blur-md border border-white/10
                                hover:bg-white/10 transition shadow-sm hover:shadow-md"
                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                    whileHover={{ scale: 1.01 }}
-                    whileTap={{ scale: 0.995 }}
-                    transition={{ layout: { duration: 0.25, ease: "easeInOut" } }}
+                    whileHover={{ scale: 1.008 }} // ✅ subtle
+                    whileTap={{ scale: 0.992 }}   // ✅ subtle
                   >
                     <div className="flex items-center justify-between gap-4">
                       <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-white leading-relaxed">
@@ -95,14 +104,14 @@ function FaqSection() {
                       <motion.div
                         variants={iconVariants}
                         animate={isOpen ? "open" : "closed"}
-                        transition={{ duration: 0.25, ease: "easeInOut" }}
+                        transition={{ duration: 0.22, ease: EASE_IN_OUT }} // ✅ crisp
                         className="flex-shrink-0 text-2xl sm:text-3xl font-medium text-white/80"
                       >
                         {isOpen ? "−" : "+"}
                       </motion.div>
                     </div>
 
-                    <AnimatePresence initial={false}>
+                    <AnimatePresence initial={false} mode="wait">
                       {isOpen && (
                         <motion.div
                           key="content"
@@ -110,7 +119,7 @@ function FaqSection() {
                           animate="open"
                           exit="closed"
                           variants={answerVariants}
-                          className="mt-3 sm:mt-4 overflow-hidden"
+                          className="mt-3 sm:mt-4 overflow-hidden will-change-[clip-path,opacity]"
                         >
                           <p className="text-xs sm:text-sm lg:text-base text-white/70 leading-relaxed sm:leading-loose">
                             {faq.description}

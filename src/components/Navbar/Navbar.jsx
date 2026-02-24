@@ -110,13 +110,7 @@ function Navbar() {
             </div>
           </li>
 
-          {/* Features */}
-          <li className="hover:opacity-80 transition-opacity duration-300 cursor-pointer">
-            Features
-          </li>
-
-
-           {/* Resources */}
+           {/* Faqs */}
           <li className="hover:opacity-80 transition-opacity duration-300 cursor-pointer">
             Faq
           </li>
