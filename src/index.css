@@ -25,3 +25,7 @@
   background: var(--primary-btn-gradient);
   color: white;
 }
+
+.button-gradient:hover {
+  background: linear-gradient(to right, #EBA62B, #147CCE);
+}

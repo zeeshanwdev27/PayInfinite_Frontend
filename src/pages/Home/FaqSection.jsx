@@ -1,0 +1,132 @@
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Faqs } from "@/data/CardsData.js";
+
+function FaqSection() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.12, duration: 0.6 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 24, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
+  // ✅ smoother than height:auto (prevents shaking)
+  const answerVariants = {
+    closed: {
+      opacity: 0,
+      clipPath: "inset(0 0 100% 0)", // hides vertically
+      transition: { duration: 0.2, ease: "easeInOut" },
+    },
+    open: {
+      opacity: 1,
+      clipPath: "inset(0 0 0% 0)",
+      transition: { duration: 0.3, ease: "easeOut" },
+    },
+  };
+
+  const iconVariants = {
+    closed: { rotate: 0 },
+    open: { rotate: 180 },
+  };
+
+  return (
+    <section className="relative px-4 sm:px-[8%] text-white py-10 md:py-20">
+      {/* Heading */}
+      <div className="max-w-5xl mx-auto text-center flex flex-col gap-5">
+        <h1 className="text-4xl md:text-5xl font-bold">
+          Got Questions? We’ve Got Answers!
+        </h1>
+      </div>
+
+      {/* Content */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 w-full mt-12 lg:mt-20 px-30 gap-10">
+        {/* Left */}
+        <div className="flex justify-center">
+          <img
+            src="./Faqs/faqs.png"
+            alt="faqs"
+            className="w-full max-w-md h-auto object-contain"
+          />
+        </div>
+
+        {/* Right */}
+        <div className="relative w-full flex flex-col gap-5">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={containerVariants}
+            className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center"
+          >
+            <motion.div variants={containerVariants} className="w-full space-y-3">
+              {Faqs.map((faq, index) => {
+                const isOpen = openIndex === index;
+
+                return (
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    layout="position" // ✅ smooth reflow without weird width jumps
+                    className="cursor-pointer w-full rounded-2xl px-5 sm:px-6 py-4 sm:py-5
+                               bg-white/5 backdrop-blur-md border border-white/10
+                               hover:bg-white/10 transition shadow-sm hover:shadow-md"
+                    onClick={() => setOpenIndex(isOpen ? null : index)}
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.995 }}
+                    transition={{ layout: { duration: 0.25, ease: "easeInOut" } }}
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-white leading-relaxed">
+                        {faq.title}
+                      </h3>
+
+                      <motion.div
+                        variants={iconVariants}
+                        animate={isOpen ? "open" : "closed"}
+                        transition={{ duration: 0.25, ease: "easeInOut" }}
+                        className="flex-shrink-0 text-2xl sm:text-3xl font-medium text-white/80"
+                      >
+                        {isOpen ? "−" : "+"}
+                      </motion.div>
+                    </div>
+
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          key="content"
+                          initial="closed"
+                          animate="open"
+                          exit="closed"
+                          variants={answerVariants}
+                          className="mt-3 sm:mt-4 overflow-hidden"
+                        >
+                          <p className="text-xs sm:text-sm lg:text-base text-white/70 leading-relaxed sm:leading-loose">
+                            {faq.description}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default FaqSection;

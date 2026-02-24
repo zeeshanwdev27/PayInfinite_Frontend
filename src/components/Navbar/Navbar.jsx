@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronDown, PhoneCall } from 'lucide-react';
 import MbOverlay from './MbOverlay.jsx'
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -124,8 +125,10 @@ function Navbar() {
 
         {/* CTA */}
         <div className='flex gap-5 items-center justify-center'>
-          
-          <button 
+
+          <motion.button 
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
             onClick={() => {
               if (window.LiveChatWidget) {
                 window.LiveChatWidget.call("maximize");
@@ -134,15 +137,17 @@ function Navbar() {
             className={`p-2 px-5 rounded-xl text-white border bg-primary border-white transition-all duration-300 cursor-pointer hover:bg-white hover:text-black`}
           >
             Get Started
-          </button>
+          </motion.button>
 
-          <a
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             href="tel:+8886519042"
             className={`p-2 px-5 rounded-xl border cursor-pointer transition-all duration-300 flex gap-3 items-center primary-btn hover:opacity-90`}
           >
             <PhoneCall className='w-5 h-5'/>
             888-651-9042
-          </a>
+          </motion.a>
 
         </div>
       </div>
