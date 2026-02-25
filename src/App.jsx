@@ -9,6 +9,7 @@ const HighRisk = React.lazy(()=> import('./pages/HighRisk/HighRisk'))
 const LowRisk = React.lazy(()=> import('./pages/LowRisk/LowRisk'))
 const ContactUs = React.lazy(()=> import('./pages/ContactUs/ContactUs'))
 const AboutUs = React.lazy(()=> import('./pages/AboutUs/AboutUs'))
+const PP_Layout = React.lazy(()=> import('./pages/PrivacyPolicy/PP_Layout'))
 
 
 const App = createBrowserRouter(
@@ -29,6 +30,10 @@ const App = createBrowserRouter(
 
      {/* Contact */}
      <Route path="/contactus" element={<ContactUs />} />  
+
+
+     {/* PrivacyPolicy */}
+     <Route path="/privacypolicy" element={<PP_Layout />} />  
      
      
      </Route>

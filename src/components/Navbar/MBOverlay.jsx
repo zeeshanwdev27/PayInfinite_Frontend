@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { PhoneCall, X, ChevronRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 function MbOverlay({ isOpen, setIsOpen }) {
   const [activeSubmenu, setActiveSubmenu] = useState(null);

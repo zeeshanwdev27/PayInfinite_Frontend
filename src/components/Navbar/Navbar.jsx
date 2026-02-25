@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDown, PhoneCall } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
-import MbOverlay from "./MbOverlay.jsx";
+import MbOverlay from "./MBOverlay";
 import { motion } from "framer-motion";
 
 function Navbar() {
