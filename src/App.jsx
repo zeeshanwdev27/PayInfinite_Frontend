@@ -1,28 +1,38 @@
-import Navbar from "./components/Navbar/Navbar"
-import Footer from "./components/Footer/Footer"
-import LenisScroll from "./components/lenis";
-
-import Home from './pages/Home/Home'
+import React from "react"
+import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom"
 
 
-function App() {
+import Layout from "./layout/Layout.jsx"
 
-  return (
+const Home = React.lazy(()=> import('./pages/Home/Home'))
+const HighRisk = React.lazy(()=> import('./pages/HighRisk/HighRisk'))
+const LowRisk = React.lazy(()=> import('./pages/LowRisk/LowRisk'))
+const ContactUs = React.lazy(()=> import('./pages/ContactUs/ContactUs'))
+const AboutUs = React.lazy(()=> import('./pages/AboutUs/AboutUs'))
+
+
+const App = createBrowserRouter(
+  createRoutesFromElements(
     <>
-    <div className=" bg-black">
+     <Route path="/" element={<Layout />}>
 
-    <LenisScroll />
-    <Navbar/>
+     <Route index element={<Home />} />
 
-    <Home/>
+     {/* HighRisk */}
+     <Route path="/highrisk" element={<HighRisk />} />  
 
-    <Footer/>
+     {/* LowRisk */}
+     <Route path="/lowrisk" element={<LowRisk />} />  
 
+     {/* About */}
+     <Route path="/aboutus" element={<AboutUs />} />  
 
-
-     </div>
+     {/* Contact */}
+     <Route path="/contactus" element={<ContactUs />} />  
+     
+     
+     </Route>
     </>
   )
-}
-
+)
 export default App

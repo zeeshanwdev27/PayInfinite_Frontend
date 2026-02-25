@@ -27,3 +27,12 @@ body { overflow-x: hidden; }
   background: var(--primary-btn-gradient);
   color: white;
 }
+
+
+.gradient-border-bottom {
+  border: none;
+  background-image: linear-gradient(to right, #EBA62B, #147CCE);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}

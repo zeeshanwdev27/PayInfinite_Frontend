@@ -89,7 +89,7 @@ function Footer() {
         <hr className="border border-stone-600" />
 
         {/* Bottom */}
-        <div className="flex flex-col sm:flex-row justify-between items-center py-5 gap-4 sm:gap-0">
+        <div className="flex flex-col lg:flex-row justify-between items-center py-5 gap-5 lg:gap-0">
           <div className="flex gap-5 items-center">
             <img
               src="./Footer/facebook.png"
