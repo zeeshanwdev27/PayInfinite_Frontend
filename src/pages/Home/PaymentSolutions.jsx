@@ -14,12 +14,12 @@ function PaymentSolutions() {
       {/* Heading */}
       <div className="max-w-5xl mx-auto text-center flex flex-col gap-5">
         <h1 className="text-4xl md:text-5xl font-bold">
-          Global Payment Solutions for a Borderless World
+          Advanced Merchant Accounts for Global Payment Processing
         </h1>
         <p className="text-white/70">
-          Navigating high-risk industries is challenging, but Crazy Merchants
-          makes it easier with our specialized high-risk merchant account
-          services.
+        Growing beyond borders requires a secure and dependable payment partner. We provide
+        high-risk and low-risk merchant accounts built for stable processing, fast approvals, and
+        worldwide transaction support.
         </p>
       </div>
 

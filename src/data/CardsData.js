@@ -122,27 +122,23 @@ export const MerchantProviderCards = [
 
 export const Faqs = [
   {
-    title: 'What is a merchant account payment processor?',
-    description: 'A merchant credit card processing company, like PayInfinite, enables businesses to accept credit and debit card payments seamlessly. We connect merchants, banks, and card networks for secure fund transfers. Features like fraud protection, transaction authorization, and settlement services are standard—but PayInfinite goes further with chargeback protection and virtual card issuing to give businesses added peace of mind.'
+    title: 'Do you provide accounts for high-risk businesses?',
+    description: 'Yes, we support both high-risk and low-risk industries with specialized underwriting and stable processing solutions tailored to business needs.'
   },
   {
-    title: 'What is a merchant payment gateway?',
-    description: 'A merchant payment gateway securely authorizes and transfers payment data online between a website and the processor. By encrypting sensitive information, the gateway protects transactions from fraud. At PayInfinite, we serve as both the payment gateway and the processor, ensuring a seamless connection and maximum security for every transaction.',
+    title: 'How long does approval take?',
+    description: 'Most merchant accounts are reviewed and approved within a few business days, depending on documentation and business type.',
   },
   {
-    title: 'What is the best payment solution?',
-    description: 'PayInfinite delivers secure, fast, and reliable payment processing for businesses of all sizes. From small startups to large enterprises, we offer tailored merchant accounts, gateways, fraud protection, and competitive rates. Our clients value our chargeback prevention tools and the smooth experience we provide for both in-person and online transactions.',
+    title: 'What payment methods are supported?',
+    description: 'We support major credit and debit cards, international payments, and multi-currency processing to help businesses operate globally.',
   },
   {
-    title: 'What is a payment processing company?',
-    description: 'Payment processing companies handle electronic transactions for retail and service locations as well as online e-commerce platforms. With PayInfinite’s merchant account services, businesses can optimize cash flow, simplify payments, prevent chargebacks, access global markets, and take advantage of innovative virtual card solutions.',
+    title: 'Is your payment processing secure?',
+    description: 'Yes, our system includes advanced fraud monitoring, encryption, and chargeback management tools to protect your transactions and revenue',
   },
-  // {
-  //   title: 'What payment system is best for small businesses?',
-  //   description: 'PayInfinite’s mission is to streamline cash flow and simplify transaction management, letting businesses focus on growth. Small business clients benefit from the flexibility to scale, while enterprise clients enjoy hassle-free control and visibility over payments. Our credit card processing also reduces chargebacks, helping businesses of any size maintain financial stability.',
-  // },
-  // {
-  //   title: 'What are PayCompass Virtual Cards?',
-  //   description: 'Virtual cards from PayInfinite provide secure, instant transactions with fraud protection and spending control. Easily manage subscriptions and payments while keeping every transaction safe and under your control.',
-  // },
+  {
+    title: 'Can I integrate it with my existing system?',
+    description: 'Absolutely. Our merchant accounts are designed for quick integration with websites, billing systems, and other platforms',
+  },
 ];

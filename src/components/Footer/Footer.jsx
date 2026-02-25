@@ -3,8 +3,22 @@ import { motion } from "framer-motion";
 
 function Footer() {
   return (
-    <div className="relative px-4 sm:px-[15%] py-10 md:py-20">
-      <div className="text-white bg-primary/50 backdrop-blur-2xl rounded-2xl border border-stone-600 p-6 sm:p-8 md:p-10 w-full flex flex-col gap-8">
+    <div className="relative px-4 sm:px-[15%] py-10 md:py-20 overflow-hidden bg-black">
+      {/* 🔥 Bottom Glow (VISIBLE) */}
+      <div className="absolute -bottom-55 left-1/2 -translate-x-1/2 pointer-events-none z-0">
+        <div
+          className="
+            w-200 h-75 md:w-250 md:h-100
+            rounded-full
+            bg-[radial-gradient(circle_at_center,#1E40FF_0%,#032C9D_40%,transparent_70%)]
+            blur-[160px]
+            opacity-70
+          "
+        />
+      </div>
+
+      {/* Footer Card */}
+      <div className="relative z-50 text-white bg-primary/50 backdrop-blur-2xl rounded-2xl border border-stone-600 p-6 sm:p-8 md:p-10 w-full flex flex-col gap-8">
         {/* Header */}
         <div className="flex flex-col justify-center items-center gap-5 text-center">
           <h1 className="text-3xl sm:text-4xl semi-bold">Join Our Newsletter</h1>
@@ -15,8 +29,12 @@ function Footer() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 items-stretch sm:items-center w-full">
+            <input
+              type="email"
+              className="w-full sm:max-w-sm border border-white/80 rounded-md px-4 py-2 text-md transition-colors duration-200 focus:outline-none focus:border-blue-400 placeholder:text-white/50"
+              placeholder="Enter your email"
+            />
 
-            <input type="email" className="w-full sm:max-w-sm border border-white/80 rounded-md px-4 py-2 text-md transition-colors duration-200 focus:outline-none focus:border-blue-400  placeholder:text-white/50" placeholder="Enter your email"/>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

@@ -84,14 +84,16 @@ function MerchantProvider() {
       <div className="flex justify-between gap-10 mx-40">
         <div className="max-w-3xl flex flex-col gap-5">
           <h1 className="text-4xl md:text-5xl font-bold">
-            High-Risk Merchant Account Provider
+            Why Choose Us
           </h1>
           <p className="text-white/70">
-            Navigating high-risk industries is challenging, but Crazy Merchants
-            makes it easier with our specialized high-risk merchant account
-            services. Our expert team is dedicated to providing secure and
-            efficient payment processing solutions tailored to your business
-            needs.
+          Choosing the right payment partner makes all the difference. We deliver secure processing,
+          smooth system integration, and dedicated support to ensure your business runs without
+          payment disruptions.
+          Our infrastructure is built for performance, stability, and long-term growth — giving you the
+          confidence to process payments without limits.
+
+            
           </p>
         </div>
 

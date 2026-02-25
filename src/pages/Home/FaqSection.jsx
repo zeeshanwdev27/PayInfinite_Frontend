@@ -53,10 +53,13 @@ function FaqSection() {
   return (
     <section className="relative px-4 sm:px-[8%] text-white py-10 md:py-20">
       {/* Heading */}
-      <div className="max-w-5xl mx-auto text-center flex flex-col gap-5">
+      <div className="max-w-3xl mx-auto text-center flex flex-col gap-5">
         <h1 className="text-4xl md:text-5xl font-bold">
-          Got Questions? We’ve Got Answers!
+          What is a merchant account?
         </h1>
+        <p className="text-white/70">A merchant account is a business account that allows you to accept credit and debit card
+payments securely. It connects your business to payment networks and ensures smooth
+transaction processing.</p>
       </div>
 
       {/* Content */}

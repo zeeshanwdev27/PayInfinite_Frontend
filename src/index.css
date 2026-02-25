@@ -11,6 +11,8 @@
 }
 
 
+body { overflow-x: hidden; }
+
 
 @theme {
   --color-primary: rgba(255, 255, 255, 0.15);
@@ -24,8 +26,4 @@
 .primary-btn {
   background: var(--primary-btn-gradient);
   color: white;
-}
-
-.button-gradient:hover {
-  background: linear-gradient(to right, #EBA62B, #147CCE);
 }
