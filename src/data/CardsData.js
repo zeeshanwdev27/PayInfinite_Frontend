@@ -1,4 +1,4 @@
-import { Store, Utensils, Users, HeartPlus, Toolbox, GraduationCap, Database, BrainCircuit, Headset, Clock, LifeBuoy, Shield, CreditCard, ShieldCheck, Globe, ShieldAlert } from 'lucide-react';
+import { LockKeyhole , DollarSign, Zap ,ShoppingBag, ChefHat, Briefcase, Activity, ShoppingCart, BookOpen, Store, Utensils, Users, HeartPlus, Toolbox, GraduationCap, Database, BrainCircuit, Headset, Clock, LifeBuoy, Shield, CreditCard, ShieldCheck, Globe, ShieldAlert } from 'lucide-react';
 
 export const LowRiskCards = [
   {
@@ -183,5 +183,126 @@ export const HR_Faqss = [
   {
     title: ' How do you help reduce chargebacks?',
     description: 'We offer advanced fraud filters, 3D Secure authentication, transaction monitoring, and chargeback management tools to protect your merchant account.',
+  },
+];
+
+
+export const LW_LowRiskCards = [
+  {
+    icon: ShoppingBag,
+    title: 'Retail Stores:',
+    description: 'Reliable in-store and online payment processing for retail businesses.'
+  },
+  {
+    icon: ChefHat,
+    title: 'Food & Beverage:',
+    description: 'Restaurants, cafés, and food service businesses with stable transaction volume.'
+  },
+  {
+    icon: Briefcase,
+    title: 'Professional Services:',
+    description: 'Consultants, agencies, and service providers with recurring billing needs.'
+  },
+  {
+    icon: BookOpen,
+    title: 'Education & Training:',
+    description: 'Course providers and educational institutions with structured payments.'
+  },
+  {
+    icon: Activity,
+    title: 'Health & Wellness:',
+    description: 'Gyms, clinics, and wellness centers with predictable revenue models.'
+  },
+  {
+    icon: ShoppingCart,
+    title: 'E-Commerce (General Products)',
+    description: 'Online stores selling standard, non-restricted products.'
+  },
+];
+
+
+export const LW_MerchantProviderCards = [
+  {
+    icon: DollarSign,
+    title: 'Competitive Processing Rates',
+    description: 'Affordable pricing designed for stable and compliant businesses.'
+  },
+  {
+    icon: Zap,
+    title: 'Fast & Simple Approvals',
+    description: 'Streamlined onboarding with minimal paperwork.'
+  },
+  {
+    icon: LockKeyhole ,
+    title: 'Secure Payment Gateway',
+    description: 'Advanced encryption and fraud protection for safe transactions.'
+  },
+  {
+    icon: Headset,
+    title: 'Dedicated Customer Support',
+    description: 'Responsive team to assist with setup and ongoing needs.'
+  },
+];
+
+
+export const LR_Faqss = [
+  {
+    title: 'What is a low-risk merchant account?',
+    description: 'A low-risk merchant account is designed for businesses with stable revenue, low chargebacks, and compliant operations, offering lower fees and smoother approvals.'
+  },
+  {
+    title: 'How long does approval take? ',
+    description: 'Most low-risk applications are approved within 24–48 hours. ',
+  },
+  {
+    title: 'What payment methods do you support?',
+    description: 'We support credit cards, debit cards, ACH payments, and recurring billing solutions.',
+  },
+  {
+    title: 'Are the processing rates lower than high-risk accounts?',
+    description: 'Yes. Low-risk businesses typically qualify for lower processing fees due to reduced financial risk. ',
+  },
+];
+
+
+export const AboutCards = [
+  {
+    icon: ShoppingBag,
+    title: 'Retail Businesses:',
+    description: 'Secure in-store and online payment solutions with competitive rates, fast settlements, and seamless POS integration for stable retail operations.'
+  },
+  {
+    icon: ChefHat,
+    title: 'Food & Beverage:',
+    description: 'Restaurants, cafés, and food service businesses with stable transaction volume.'
+  },
+  {
+    icon: Briefcase,
+    title: 'High-Risk & Specialized Industries:',
+    description: 'Custom merchant account approvals for businesses facing chargebacks, industry restrictions, offshore needs, or prior declines.'
+  },
+];
+
+
+export const About_Faqss = [
+  {
+    title: 'What type of businesses do you support?',
+    description: 'We support both high-risk and low-risk businesses across retail, services, e-commerce, digital products, and specialized industries.'
+  },
+  {
+    title: 'How long does approval take? ',
+    description: 'Low-risk applications are typically approved within 24–48 hours. High-risk accounts may take 48–72 hours depending on documentation',
+  },
+  {
+    title: 'Do you offer offshore merchant accounts?',
+    description: 'Yes. We provide both domestic and offshore processing solutions tailored to your business model and risk profile.',
+  },
+  {
+    title: 'What payment methods are supported?',
+    description: 'We support credit cards, debit cards, ACH payments, recurring billing, and multi-currency international transactions.',
+  },
+  {
+    title: 'How do you help manage chargebacks?',
+    description: 'We offer fraud detection tools, 3D Secure authentication, transaction monitoring, and chargeback management support to protect merchant stability',
   },
 ];

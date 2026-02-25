@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "motion/react";
-import Form from "@/components/form";
+import Form from '@/components/form'
 
-function HR_HeroSection() {
+function LR_HeroSection() {
   const containerVariants = {
     hidden: {},
     visible: {
@@ -25,6 +25,7 @@ function HR_HeroSection() {
     <section className="min-h-screen pt-32 sm:pt-28 lg:pt-32 overflow-hidden">
       {/* Body */}
       <div className="px-4 sm:px-[6%] lg:px-[10%] rounded-4xl py-8 sm:py-10 lg:p-12 backdrop-blur-[14.4px]">
+        
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1.5fr] gap-8 sm:gap-10">
           {/* RIGHT (show first on small/medium) */}
           <motion.div
@@ -37,23 +38,18 @@ function HR_HeroSection() {
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight text-center lg:text-left"
             >
-              Best High-Risk Merchant Accounts
+              Best Low-Risk Merchant Accounts
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="text-sm sm:text-base text-white/70 text-center lg:text-left"
             >
-              If your business has been declined by banks or labeled
-              “high-risk,” you’re in the right place. PayInfinite specializes in
-              high-risk merchant accounts for businesses traditional providers
-              reject. With 15+ years of experience, we deliver secure,
-              compliant, and scalable payment solutions — including offshore and
-              domestic merchant accounts, high-risk gateways, ACH processing,
-              and advanced chargeback protection. Whether you operate in a
-              restricted industry, have low credit, high chargebacks, or past
-              processing issues, we structure solutions that help you get
-              approved — and stay approved — for long-term growth.
+              Looking for a reliable and cost-effective payment processing solution? 
+PayInfinite provides secure and seamless low-risk merchant accounts designed for stable 
+businesses with consistent transaction history. We help you accept credit cards, debit cards, 
+and ACH payments with competitive rates and smooth approvals. 
+From retail to service-based businesses, we make payment processing simple and dependable. 
             </motion.p>
 
             <motion.div
@@ -70,7 +66,7 @@ function HR_HeroSection() {
                 }}
                 className="p-2 px-5 rounded-xl text-white border bg-primary border-white transition-all duration-300 cursor-pointer hover:bg-white hover:text-black w-full sm:w-auto"
               >
-                Get Started
+                Get Started Today 
               </motion.button>
 
               <motion.button
@@ -85,6 +81,7 @@ function HR_HeroSection() {
               >
                 Speak With a Specialist
               </motion.button>
+
             </motion.div>
           </motion.div>
 
@@ -120,13 +117,19 @@ function HR_HeroSection() {
                   <span className="text-blue-400">Pay Infinite</span>
                 </h1>
                 <p className="text-sm">
-                  Fill out this form and a merchant services representative will
-                  be in touch!
+                  Fill out this form and a merchant services representative will be
+                  in touch!
                 </p>
               </motion.div>
 
+
+
               {/* Form Import */}
-              <Form />
+              <Form/>
+
+
+
+
 
               <motion.p
                 variants={{
@@ -135,11 +138,7 @@ function HR_HeroSection() {
                 }}
                 className="text-sm"
               >
-                Disclaimer: You agree to receive messages from PayInfinite. This
-                includes SMS messages for account updates, application status,
-                appointment scheduling, reminders, and billing notifications.
-                Message frequency may vary. Text STOP to opt out at any time.
-                View our Privacy Policy and Terms & Conditions for more details.
+                Disclaimer: You agree to receive messages from PayInfinite. This includes SMS messages for account updates, application status, appointment scheduling, reminders, and billing notifications. Message frequency may vary. Text STOP to opt out at any time. View our Privacy Policy and Terms & Conditions for more details.
               </motion.p>
 
               <motion.button
@@ -178,7 +177,7 @@ function HR_HeroSection() {
                 }}
                 className="text-center font-semibold text-xl sm:text-2xl"
               >
-                COMMON REASONS BUSINESSES QUALIFY AS LOW-RISK
+                Common Reasons Business Are Classified High-Risk
               </motion.h1>
 
               <motion.div
@@ -190,36 +189,31 @@ function HR_HeroSection() {
               >
                 {[
                   {
-                    title: "Established Business History",
-                    text1: "Operating history with consistent revenue",
-                    text2: "helps reduce underwriting risk.",
+                    title: "Credit Challenges",
+                    text1: "Low personal or business credit",
+                    text2: "can increase perceived risk.",
                   },
                   {
-                    title: "Low Chargeback Ratio",
-                    text1: "Minimal disputes and refund activity",
-                    text2: "improve approval chances and account stability.",
+                    title: "Subscription & Continuity Billing",
+                    text1: "Recurring models often experience",
+                    text2: "higher dispute rates.",
                   },
                   {
-                    title: "Strong Credit Profile",
-                    text1: "Healthy personal and business credit",
-                    text2:
-                      "builds lender confidence and lowers risk perception.",
+                    title: "Chargebacks & Refund Volume",
+                    text1: "Frequent disputes or refund activity",
+                    text2: "can trigger risk flags.",
                   },
                   {
-                    title: "Stable Monthly Processing Volume",
-                    text1: "Predictable transaction volume and growth",
-                    text2: "support long-term merchant account success.",
+                    title: "Free Trials or Promotional Offers",
+                    text1: "Trial-based offers sometimes",
+                    text2: "result in customer disputes.",
                   },
                 ].map((item, i) => (
                   <motion.div
                     key={i}
                     variants={{
                       hidden: { opacity: 0, y: 18 },
-                      visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: { duration: 0.45 },
-                      },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
                     }}
                     className="w-full py-3 rounded-xl bg-white/5 border border-white/10 px-4"
                   >
@@ -293,11 +287,7 @@ function HR_HeroSection() {
                     key={i}
                     variants={{
                       hidden: { opacity: 0, y: 25 },
-                      visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: { duration: 0.5 },
-                      },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
                     }}
                     className="py-3 rounded-t-xl cursor-pointer"
                   >
@@ -321,4 +311,4 @@ function HR_HeroSection() {
   );
 }
 
-export default HR_HeroSection;
+export default LR_HeroSection;
