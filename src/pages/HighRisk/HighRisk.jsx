@@ -8,12 +8,11 @@ import HR_Faqs from './HR_Faqs'
 
 function GlowSection({ children, index, className = "" }) {
   const isEven = index % 2 === 0;
-  const isHero = index === 0;
 
   return (
     <div className={`relative ${className}`}>
       {/* Glow Layer */}
-      <div className={`absolute inset-0 pointer-events-none z-0 overflow-hidden ${isHero ? "hidden lg:block" : ""}`}>
+      <div className={`absolute inset-0 pointer-events-none z-0 overflow-hidden`}>
         <div className="absolute inset-0" style={{ WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)", maskImage: "linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)",}}>
          
           {/* TOP GLOW */}
