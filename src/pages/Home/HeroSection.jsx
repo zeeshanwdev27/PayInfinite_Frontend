@@ -78,7 +78,7 @@ function HeroSection() {
                 whileTap={{ scale: 0.95 }}
                 className="rounded-xl sm:rounded-l-none sm:rounded-r-xl primary-btn text-white px-6 py-3 font-semibold hover:opacity-90 transition cursor-pointer w-full sm:w-auto"
               >
-                Make A Payment
+                Get A Quote
               </motion.button>
             </motion.div>
 

@@ -10,6 +10,7 @@ const LowRisk = React.lazy(()=> import('./pages/LowRisk/LowRisk'))
 const ContactUs = React.lazy(()=> import('./pages/ContactUs/ContactUs'))
 const AboutUs = React.lazy(()=> import('./pages/AboutUs/AboutUs'))
 const PP_Layout = React.lazy(()=> import('./pages/PrivacyPolicy/PP_Layout'))
+const TC_Layout = React.lazy(()=> import('./pages/TermsAndConditions/TC_Layout'))
 
 
 const App = createBrowserRouter(
@@ -34,7 +35,9 @@ const App = createBrowserRouter(
 
      {/* PrivacyPolicy */}
      <Route path="/privacypolicy" element={<PP_Layout />} />  
-     
+
+     {/* TermsAndConditions */}
+     <Route path="/termsandconditions" element={<TC_Layout />} />  
      
      </Route>
     </>

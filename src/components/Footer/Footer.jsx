@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -66,23 +67,41 @@ function Footer() {
             <p>Email: info@medicalhealth.com</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 text-base sm:text-lg gap-8 sm:gap-10">
+          <div className="grid grid-cols-2 sm:grid-cols-2 text-base sm:text-lg gap-8 sm:gap-10">
+
             <div className="flex flex-col">
               <h2 className="text-md font-semibold text-white mb-3">Explore</h2>
               <ul className="space-y-1">
+                <Link to={'/'}>
                 <li className="hover:text-blue-400 cursor-pointer">Home</li>
+                </Link>
+                <Link to={'/aboutus'}>
                 <li className="hover:text-blue-400 cursor-pointer">About Us</li>
+                </Link>
+                <Link to={'/contactus'}>
                 <li className="hover:text-blue-400 cursor-pointer">Contact Us</li>
+                </Link>
+                <Link to={'/privacypolicy'}>
+                <li className="hover:text-blue-400 cursor-pointer">Privacy Policy</li>
+                </Link>
+                <Link to={'/termsandconditions'}>
+                <li className="hover:text-blue-400 cursor-pointer">Terms And Conditions</li>
+                </Link>
               </ul>
             </div>
 
             <div className="flex flex-col">
               <h2 className="text-md font-semibold text-white mb-3">Services</h2>
               <ul className="space-y-1">
+                <Link to={'/highrisk'}>
                 <li className="hover:text-blue-400 cursor-pointer">High-Risk</li>
+                </Link>
+                <Link to={'/lowrisk'}>
                 <li className="hover:text-blue-400 cursor-pointer">Low-Risk</li>
+                </Link>
               </ul>
             </div>
+            
           </div>
         </div>
 
@@ -117,6 +136,8 @@ function Footer() {
             © Copyright 2026 PayInfinite. All Rights Reserved
           </p>
         </div>
+
+
       </div>
     </div>
   );
