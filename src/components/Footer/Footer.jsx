@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 function Footer() {
   return (
     <div className="relative px-4 sm:px-[15%] py-10 md:py-20 overflow-hidden bg-black">
-      {/* 🔥 Bottom Glow (VISIBLE) */}
+
+      {/* Bottom Glow */}
       <div className="absolute -bottom-55 left-1/2 -translate-x-1/2 pointer-events-none z-0">
         <div
           className="
@@ -18,7 +19,7 @@ function Footer() {
       </div>
 
       {/* Footer Card */}
-      <div className="relative z-50 text-white bg-primary/50 backdrop-blur-2xl rounded-2xl border border-stone-600 p-6 sm:p-8 md:p-10 w-full flex flex-col gap-8">
+      <div className="relative text-white bg-primary/50 backdrop-blur-2xl rounded-2xl border border-stone-600 p-6 sm:p-8 md:p-10 w-full flex flex-col gap-8">
         {/* Header */}
         <div className="flex flex-col justify-center items-center gap-5 text-center">
           <h1 className="text-3xl sm:text-4xl semi-bold">Join Our Newsletter</h1>

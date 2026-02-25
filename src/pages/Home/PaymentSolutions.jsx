@@ -9,7 +9,7 @@ function PaymentSolutions() {
   ];
 
   return (
-    <section className="relative  py-24 px-4 sm:px-[8%] text-white">
+    <section className="relative py-24 px-4 sm:px-[8%] text-white">
       
       {/* Heading */}
       <div className="max-w-5xl mx-auto text-center flex flex-col gap-5">
@@ -17,9 +17,9 @@ function PaymentSolutions() {
           Advanced Merchant Accounts for Global Payment Processing
         </h1>
         <p className="text-white/70">
-        Growing beyond borders requires a secure and dependable payment partner. We provide
-        high-risk and low-risk merchant accounts built for stable processing, fast approvals, and
-        worldwide transaction support.
+          Growing beyond borders requires a secure and dependable payment partner.
+          We provide high-risk and low-risk merchant accounts built for stable
+          processing, fast approvals, and worldwide transaction support.
         </p>
       </div>
 
@@ -30,43 +30,34 @@ function PaymentSolutions() {
         ))}
       </div>
 
-
-
       {/* Buttons */}
       <div className="mt-15 flex justify-center gap-7 items-center">
-          <motion.button 
+        <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-            onClick={() => {
-              if (window.LiveChatWidget) {
-                window.LiveChatWidget.call("maximize");
-              }
-            }}
-            className={`p-2 px-5 rounded-xl text-white border bg-primary border-white transition-all duration-300 cursor-pointer hover:bg-white hover:text-black`}
-          >
-            Get Started
-          </motion.button>
+          onClick={() => {
+            if (window.LiveChatWidget) {
+              window.LiveChatWidget.call("maximize");
+            }
+          }}
+          className="p-2 px-5 rounded-xl text-white border bg-primary border-white transition-all duration-300 cursor-pointer hover:bg-white hover:text-black"
+        >
+          Get Started
+        </motion.button>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className={`p-2 px-5 rounded-xl border cursor-pointer transition-all duration-300 flex gap-3 items-center primary-btn hover:opacity-90`}
-          >
-            Learn More
-          </motion.button>
-
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="p-2 px-5 rounded-xl border cursor-pointer transition-all duration-300 flex gap-3 items-center primary-btn hover:opacity-90"
+        >
+          Learn More
+        </motion.button>
       </div>
-
-
-
-
     </section>
   );
 }
 
 export default PaymentSolutions;
-
-
 
 /* ================= Hover Card ================= */
 
@@ -74,18 +65,25 @@ function HoverCard({ card }) {
   return (
     <div className="relative group cursor-pointer overflow-hidden rounded-3xl hover:scale-105">
 
-      {/* Default Image */}
+      {/* ✅ Large screens → show default image with hover swap */}
       <img
         src={card.image}
         alt=""
-        className="w-full h-full object-cover rounded-3xl transition-opacity duration-500 group-hover:opacity-0"
+        className="hidden md:block w-full h-full object-cover rounded-3xl transition-opacity duration-500 group-hover:opacity-0"
       />
 
-      {/* Hover Image */}
+      {/* ✅ Large screens → hover image */}
       <img
         src={card.hover}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover rounded-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        className="hidden md:block absolute inset-0 w-full h-full object-cover rounded-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+      />
+
+      {/* ✅ Small & Medium → always show hover image only */}
+      <img
+        src={card.hover}
+        alt=""
+        className="block md:hidden w-full h-full object-cover rounded-3xl"
       />
 
     </div>
