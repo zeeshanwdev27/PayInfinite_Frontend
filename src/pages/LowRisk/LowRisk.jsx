@@ -1,7 +1,7 @@
 import React from "react";
 import LR_HeroSection from './LR_HeroSection'
 import LW_LowRiskIn from './LW_LowRiskIn'
-import PaymentSolutions from '../Home/PaymentSolutions'
+import LR_PaymentSol from './LR_PaymentSol'
 import LW_MerchantProvider from './LW_MerchantProvider'
 import LR_Faqs from './LR_Faqs'
 
@@ -34,7 +34,7 @@ function LowRisk() {
   const sections = [
     <LR_HeroSection />,
     <LW_LowRiskIn />,
-    <PaymentSolutions />,
+    <LR_PaymentSol />,
     <LW_MerchantProvider/>,
     <LR_Faqs/>
 
