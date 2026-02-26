@@ -51,16 +51,10 @@ function HR_Faqs() {
   return (
     <section className="relative px-4 sm:px-[6%] lg:px-[8%] text-white py-10 md:py-20">
       {/* Heading */}
-      <div className="max-w-3xl mx-auto text-center flex flex-col gap-4 sm:gap-5">
+      <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          What is a merchant account?
+          Got Questions? We’ve Got Answers! 
         </h1>
-
-        <p className="text-white/70 text-sm sm:text-base">
-          A merchant account is a business account that allows you to accept
-          credit and debit card payments securely. It connects your business to
-          payment networks and ensures smooth transaction processing.
-        </p>
       </div>
 
       {/* Content */}
