@@ -2,10 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/payfav.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PayInfinite - Seamless Solutions For Infinite Problems</title>
+
+    <!-- ✅ Title (keep ~50–60 chars) -->
+    <title>PayInfinite | Merchant Accounts & Secure Payment Processing</title>
+
+    <!-- ✅ Primary SEO Description (150–160 chars) -->
+    <meta
+      name="description"
+      content="PayInfinite provides secure merchant accounts and payment processing for low-risk and high-risk businesses. Accept cards, recurring billing, and bank transfers."
+    />
+
+    <!-- ✅ Keywords (optional; not very important for Google, but ok) -->
+    <meta
+      name="keywords"
+      content="PayInfinite, merchant account, payment processing, high-risk merchant account, low-risk merchant account, payment gateway, recurring billing"
+    />
+
+    <!-- ✅ Canonical (IMPORTANT) -->
+    <link rel="canonical" href="https://payinfinite.com/" />
+
+    <!-- ✅ Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/png" href="/payfav.png" />
+    <link rel="apple-touch-icon" href="/payfav.png" />
+
+    <!-- ✅ Open Graph (Facebook/LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PayInfinite" />
+    <meta property="og:title" content="PayInfinite | Merchant Accounts & Secure Payment Processing" />
+    <meta
+      property="og:description"
+      content="Secure merchant accounts and payment processing for low-risk and high-risk businesses. Accept cards, recurring billing, and bank transfers."
+    />
+    <meta property="og:url" content="https://payinfinite.com/" />
+    <!-- Replace with your real share image (recommended 1200x630) -->
+    <meta property="og:image" content="https://payinfinite.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- ✅ Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PayInfinite | Merchant Accounts & Secure Payment Processing" />
+    <meta
+      name="twitter:description"
+      content="Secure merchant accounts and payment processing for low-risk and high-risk businesses. Accept cards, recurring billing, and bank transfers."
+    />
+    <meta name="twitter:image" content="https://payinfinite.com/og-image.jpg" />
+
+    <!-- ✅ Preconnect (speed improvement if you use external fonts/analytics later) -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+    <!-- ✅ Structured Data (Organization + Website) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PayInfinite",
+        "url": "https://payinfinite.com/",
+        "logo": "https://payinfinite.com/payfav.png",
+        "sameAs": []
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PayInfinite",
+        "url": "https://payinfinite.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://payinfinite.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
