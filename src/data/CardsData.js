@@ -36,43 +36,43 @@ export const LowRiskCards = [
 export const HighRiskCards = [
   {
     image: './HighRisk/travel.png',
-    title: 'Travel Agencies Industry',
+    title: 'Travel Agencies',
   },
   {
     image: './HighRisk/tech.png',
-    title: 'Tech Support Industry',
+    title: 'Tech Support',
   },
   {
     image: './HighRisk/CallCenter.png',
-    title: 'Call Centers Industry',
+    title: 'Call Centers',
   },
   {
     image: './HighRisk/Insurance.png',
-    title: 'Insurance / Register Industry',
+    title: 'Insurance / Register',
   },
   {
     image: './HighRisk/Eccomerce.png',
-    title: 'E-commerce Industry',
+    title: 'E-commerce',
   },
   {
     image: './HighRisk/Vape.png',
-    title: 'Vape Shops Industry',
+    title: 'Vape Shops',
   },
   {
     image: './HighRisk/Grocery.png',
-    title: 'Groceries Industry',
+    title: 'Groceries',
   },
   {
     image: './HighRisk/GasStation.png',
-    title: 'Gas stations Industry',
+    title: 'Gas stations',
   },
   {
     image: './HighRisk/digitalbook.png',
-    title: 'Digital Books Industry',
+    title: 'Digital Books',
   },
   {
     image: './HighRisk/Seo.png',
-    title: 'SEO / Design Industry',
+    title: 'SEO / Design',
   },
 ];
 

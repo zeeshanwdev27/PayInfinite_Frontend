@@ -57,7 +57,7 @@ function AB_HeroSection() {
           {/* left */}
           <motion.img
             src="/About/aboutus.png"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-2xl border-5 border-white/30"
             variants={itemVariants}
             initial="hidden"
             animate="visible"

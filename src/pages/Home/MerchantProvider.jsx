@@ -62,12 +62,9 @@ function MerchantProvider() {
   const handleNext = () => setIndex((prev) => Math.min(maxIndex, prev + 1));
 
   return (
-    // ✅ small/medium: better padding + spacing
-    // ✅ large: EXACT SAME as your current (py-24 px sm:px-[8%])
+
     <section className="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-[6%] lg:px-[8%] text-white w-full">
       {/* Heading */}
-      {/* ✅ small: stacked layout
-          ✅ large: same layout (mx-40, flex row, image right) */}
       <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-10 mx-0 lg:mx-40 items-start">
         <div className="max-w-3xl flex flex-col gap-4 sm:gap-5 text-center lg:text-left mx-auto lg:mx-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
@@ -86,7 +83,7 @@ function MerchantProvider() {
 
         {/* ✅ hide on small, show on md+, keep same sizing on large */}
         <img
-          src="./MerchantProvider/risk.png"
+          src="./MerchantProvider/risk2.png"
           alt="riskmanagment"
           className="hidden md:block w-80 lg:w-120 h-auto lg:h-50 mx-auto lg:mx-0"
         />
