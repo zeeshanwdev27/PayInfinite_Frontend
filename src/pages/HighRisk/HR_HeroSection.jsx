@@ -37,23 +37,19 @@ function HR_HeroSection() {
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight text-center lg:text-left"
             >
-              Best High-Risk Merchant Accounts
+              Secure & Reliable High-Risk Merchant Accounts
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="text-sm sm:text-base text-white/70 text-center lg:text-left"
             >
-              If your business has been declined by banks or labeled
-              “high-risk,” you’re in the right place. PayInfinite specializes in
-              high-risk merchant accounts for businesses traditional providers
-              reject. With 15+ years of experience, we deliver secure,
-              compliant, and scalable payment solutions — including offshore and
-              domestic merchant accounts, high-risk gateways, ACH processing,
-              and advanced chargeback protection. Whether you operate in a
-              restricted industry, have low credit, high chargebacks, or past
-              processing issues, we structure solutions that help you get
-              approved — and stay approved — for long-term growth.
+              High-risk businesses often face rejections, closures, or strict
+              limits from traditional providers. At PayInfinite, we deliver
+              specialized merchant accounts built for secure, uninterrupted
+              processing — including cards, online payments, recurring billing,
+              and ACH. We help high-risk businesses get approved, stay
+              operational, and scale with confidence.
             </motion.p>
 
             <motion.div
@@ -102,7 +98,7 @@ function HR_HeroSection() {
                   },
                 },
               }}
-              className="w-full max-w-2xl flex flex-col gap-10 p-6 text-white border-4 border-[#FFFFFF]/40 rounded-2xl"
+              className="w-full h-fit max-w-2xl flex flex-col gap-10 p-6 text-white border-4 border-[#FFFFFF]/40 rounded-2xl"
             >
               <motion.div
                 variants={{
@@ -127,7 +123,6 @@ function HR_HeroSection() {
 
               {/* Form Import */}
               <Form />
-
             </motion.div>
           </div>
         </div>
@@ -153,7 +148,7 @@ function HR_HeroSection() {
                 }}
                 className="text-center font-semibold text-xl sm:text-2xl"
               >
-                COMMON REASONS BUSINESSES QUALIFY AS LOW-RISK
+                Common Reasons Business Are Classified High-Risk
               </motion.h1>
 
               <motion.div
@@ -165,25 +160,24 @@ function HR_HeroSection() {
               >
                 {[
                   {
-                    title: "Established Business History",
-                    text1: "Operating history with consistent revenue",
-                    text2: "helps reduce underwriting risk.",
+                    title: "Frequent Payment Rejections",
+                    text1: "High-risk businesses are often declined by",
+                    text2: "traditional banks and payment providers due to industry classification or risk policies.",
                   },
                   {
-                    title: "Low Chargeback Ratio",
-                    text1: "Minimal disputes and refund activity",
-                    text2: "improve approval chances and account stability.",
+                    title: "Sudden Account Shutdowns",
+                    text1: "Many merchants experience unexpected account",
+                    text2: "suspensions or terminated processing without prior notice.",
                   },
                   {
-                    title: "Strong Credit Profile",
-                    text1: "Healthy personal and business credit",
-                    text2:
-                      "builds lender confidence and lowers risk perception.",
+                    title: "High Chargeback Monitoring",
+                    text1: "Businesses operating in high-risk sectors",
+                    text2: "face strict monitoring, making transaction stability difficult to maintain.",
                   },
                   {
-                    title: "Stable Monthly Processing Volume",
-                    text1: "Predictable transaction volume and growth",
-                    text2: "support long-term merchant account success.",
+                    title: "Delayed Approvals & Onboarding",
+                    text1: "Lengthy underwriting processes and repeated",
+                    text2: "document requests slow down business operations and payment activation.",
                   },
                 ].map((item, i) => (
                   <motion.div
@@ -240,28 +234,28 @@ function HR_HeroSection() {
                   hidden: {},
                   visible: { transition: { staggerChildren: 0.15 } },
                 }}
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10 lg:gap-30 justify-items-center"
+                className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10 lg:gap-20 justify-items-center"
               >
                 {[
                   {
-                    title: "Credit Challenges",
-                    text1: "Low personal or business credit",
-                    text2: "can increase perceived risk.",
+                    title: "Frequent Payment Rejections",
+                    text1: "High-risk businesses are often declined by",
+                    text2: "traditional banks and payment providers due to industry classification or risk policies.",
                   },
                   {
-                    title: "Subscription & Continuity Billing",
-                    text1: "Recurring models often experience",
-                    text2: "higher dispute rates.",
+                    title: "Sudden Account Shutdowns",
+                    text1: "Many merchants experience unexpected ",
+                    text2: "account suspensions or terminated processing without prior notice.",
                   },
                   {
-                    title: "Chargebacks & Refund Volume",
-                    text1: "Frequent disputes or refund activity",
-                    text2: "can trigger risk flags.",
+                    title: "High Chargeback Monitoring",
+                    text1: "Businesses operating in high-risk sectors",
+                    text2: "face strict monitoring, making transaction stability difficult to maintain.",
                   },
                   {
-                    title: "Free Trials or Promotional Offers",
-                    text1: "Trial-based offers sometimes",
-                    text2: "result in customer disputes.",
+                    title: "Delayed Approvals & Onboarding",
+                    text1: "Lengthy underwriting processes and repeated",
+                    text2: "document requests slow down business operations and payment activation.",
                   },
                 ].map((item, i) => (
                   <motion.div

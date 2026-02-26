@@ -1,5 +1,4 @@
 import React from "react";
-import CountUp from "@/components/count-number.jsx";
 import { motion } from "framer-motion";
 
 function HeroSection() {
@@ -111,20 +110,39 @@ function HeroSection() {
 
         {/* Bottom */}
         <div className="hidden lg:block w-full max-w-8xl rounded-4xl border border-gray-800 px-4 sm:px-8 lg:px-10 py-5 bg-primary/50 mt-8 sm:mt-10 mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10 lg:gap-40 justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10 lg:gap-10 justify-items-center">
             <div className="py-3 rounded-t-xl cursor-pointer">
-              <div className="flex flex-col gap-2 items-center text-white text-center">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-                  <CountUp from={100} to={265} />K
-                </h1>
 
-                <div className="flex flex-col gap-1">
-                  <h2 className="font-semibold text-sm sm:text-base lg:text-lg">
-                    Transactions Processed
+              <div className="flex flex-col gap-2 items-center text-white text-center">
+                <div className="flex flex-col gap-2">
+                  <h2 className="font-semibold text-sm sm:text-base lg:text-md">
+                    Limited Payment Options
                   </h2>
                   <p className="text-[10px] sm:text-xs">
-                    <span className="block">Secure and stable payment</span>
-                    <span className="block">processing for growing businesses.</span>
+                    <span className="block">
+                      Businesses often struggle to accept
+                    </span>
+                    <span className="block">
+                       multiple payment methods due to restricted merchant account capabilities.
+                    </span>
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+
+            <div className="py-3 rounded-t-xl cursor-pointer">
+              <div className="flex flex-col gap-2 items-center text-white text-center">
+ 
+                <div className="flex flex-col gap-2">
+                  <h2 className="font-semibold text-sm sm:text-base lg:text-md">
+                    Processing Limits & Fund Holds
+                  </h2>
+                  <p className="text-[10px] sm:text-xs">
+                    <span className="block">
+                      Increasing transaction volume can 
+                    </span>
+                    <span className="block">lead to rolling reserves, payout delays, or unexpected fund holds.</span>
                   </p>
                 </div>
               </div>
@@ -132,17 +150,16 @@ function HeroSection() {
 
             <div className="py-3 rounded-t-xl cursor-pointer">
               <div className="flex flex-col gap-2 items-center text-white text-center">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-                  <CountUp from={0} to={89} />K
-                </h1>
-
-                <div className="flex flex-col gap-1">
-                  <h2 className="font-semibold text-sm sm:text-base lg:text-lg">
-                    Active Merchant Account
+  
+                <div className="flex flex-col gap-2">
+                  <h2 className="font-semibold text-sm sm:text-base lg:text-md">
+                    Integration Difficulties
                   </h2>
                   <p className="text-[10px] sm:text-xs">
-                    <span className="block">Supporting startups, enterprises,</span>
-                    <span className="block">and high-risk industries.</span>
+                    <span className="block">Complex payment gateway setups and</span>
+                    <span className="block">
+                      compatibility issues can delay business operations.
+                    </span>
                   </p>
                 </div>
               </div>
@@ -150,41 +167,21 @@ function HeroSection() {
 
             <div className="py-3 rounded-t-xl cursor-pointer">
               <div className="flex flex-col gap-2 items-center text-white text-center">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-                  <CountUp from={0} to={89} />+
-                </h1>
-
-                <div className="flex flex-col gap-1">
-                  <h2 className="font-semibold text-sm sm:text-base lg:text-lg">
-                    Payment Integrations
+                <div className="flex flex-col gap-2">
+                  <h2 className="font-semibold text-sm sm:text-base lg:text-md">
+                    Lack of Reliable Support
                   </h2>
                   <p className="text-[10px] sm:text-xs">
-                    <span className="block">Cards, international payments,</span>
-                    <span className="block">and global gateways.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="py-3 rounded-t-xl cursor-pointer">
-              <div className="flex flex-col gap-2 items-center text-white text-center">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-                  <CountUp from={0} to={99} />%
-                </h1>
-
-                <div className="flex flex-col gap-1">
-                  <h2 className="font-semibold text-sm sm:text-base lg:text-lg">
-                    Approval Success Rate
-                  </h2>
-                  <p className="text-[10px] sm:text-xs">
-                    <span className="block">Fast onboarding with</span>
-                    <span className="block">dedicated merchant support.</span>
+                    <span className="block">Many merchants face slow responses</span>
+                    <span className="block">or limited assistance when payment issues directly impact revenue flow.</span>
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import Form from '@/components/form'
+import Form from "@/components/form";
 
 function LR_HeroSection() {
   const containerVariants = {
@@ -25,7 +25,6 @@ function LR_HeroSection() {
     <section className="min-h-screen pt-32 sm:pt-28 lg:pt-32 overflow-hidden">
       {/* Body */}
       <div className="px-4 sm:px-[6%] lg:px-[10%] rounded-4xl py-8 sm:py-10 lg:p-12 backdrop-blur-[14.4px]">
-        
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1.5fr] gap-8 sm:gap-10">
           {/* RIGHT (show first on small/medium) */}
           <motion.div
@@ -38,18 +37,19 @@ function LR_HeroSection() {
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight text-center lg:text-left"
             >
-              Best Low-Risk Merchant Accounts
+              Stable & Scalable Low-Risk Merchant Accounts
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="text-sm sm:text-base text-white/70 text-center lg:text-left"
             >
-              Looking for a reliable and cost-effective payment processing solution? 
-PayInfinite provides secure and seamless low-risk merchant accounts designed for stable 
-businesses with consistent transaction history. We help you accept credit cards, debit cards, 
-and ACH payments with competitive rates and smooth approvals. 
-From retail to service-based businesses, we make payment processing simple and dependable. 
+              Low-risk businesses often face limits like processing caps and
+              delayed settlements from traditional providers. At PayInfinite, we
+              offer reliable, flexible merchant accounts with competitive rates
+              and support for cards, online payments, recurring billing, and
+              ACH. Whether you run e-commerce, retail, or services, our secure
+              and scalable solutions ensure smooth, uninterrupted growth.
             </motion.p>
 
             <motion.div
@@ -66,7 +66,7 @@ From retail to service-based businesses, we make payment processing simple and d
                 }}
                 className="p-2 px-5 rounded-xl text-white border bg-primary border-white transition-all duration-300 cursor-pointer hover:bg-white hover:text-black w-full sm:w-auto"
               >
-                Get Started Today 
+                Get Started Today
               </motion.button>
 
               <motion.button
@@ -81,7 +81,6 @@ From retail to service-based businesses, we make payment processing simple and d
               >
                 Speak With a Specialist
               </motion.button>
-
             </motion.div>
           </motion.div>
 
@@ -99,7 +98,7 @@ From retail to service-based businesses, we make payment processing simple and d
                   },
                 },
               }}
-              className="w-full max-w-2xl flex flex-col gap-10 p-6 text-white border-4 border-[#FFFFFF]/40 rounded-2xl"
+              className="w-full h-fit max-w-2xl flex flex-col gap-10 p-6 text-white border-4 border-[#FFFFFF]/40 rounded-2xl"
             >
               <motion.div
                 variants={{
@@ -117,16 +116,13 @@ From retail to service-based businesses, we make payment processing simple and d
                   <span className="text-blue-400">Pay Infinite</span>
                 </h1>
                 <p className="text-sm">
-                  Fill out this form and a merchant services representative will be
-                  in touch!
+                  Fill out this form and a merchant services representative will
+                  be in touch!
                 </p>
               </motion.div>
 
-
-
               {/* Form Import */}
-              <Form/>
-
+              <Form />
             </motion.div>
           </div>
         </div>
@@ -152,7 +148,7 @@ From retail to service-based businesses, we make payment processing simple and d
                 }}
                 className="text-center font-semibold text-xl sm:text-2xl"
               >
-                Common Reasons Business Are Classified High-Risk
+               Common Reasons Business Are Classified Low-Risk
               </motion.h1>
 
               <motion.div
@@ -164,31 +160,37 @@ From retail to service-based businesses, we make payment processing simple and d
               >
                 {[
                   {
-                    title: "Credit Challenges",
-                    text1: "Low personal or business credit",
-                    text2: "can increase perceived risk.",
+                    title: "Processing Restrictions",
+                    text1: "Low-risk businesses still face ",
+                    text2:
+                      "transaction limits, delays, and sudden restrictions from providers.",
                   },
                   {
-                    title: "Subscription & Continuity Billing",
-                    text1: "Recurring models often experience",
-                    text2: "higher dispute rates.",
+                    title: "Limited Payment Flexibility",
+                    text1: "Standard accounts often restrict ",
+                    text2:
+                      "recurring billing, international payments, and scaling needs.",
                   },
                   {
-                    title: "Chargebacks & Refund Volume",
-                    text1: "Frequent disputes or refund activity",
-                    text2: "can trigger risk flags.",
+                    title: "Growth Barriers",
+                    text1: "Higher transaction volumes can trigger ",
+                    text2: "reviews, fund holds, or processing slowdowns.",
                   },
                   {
-                    title: "Free Trials or Promotional Offers",
-                    text1: "Trial-based offers sometimes",
-                    text2: "result in customer disputes.",
+                    title: "Lack of Scalable Solutions",
+                    text1: "Traditional processors lack flexibility,",
+                    text2: "for expanding and fast-growing businesses.",
                   },
                 ].map((item, i) => (
                   <motion.div
                     key={i}
                     variants={{
                       hidden: { opacity: 0, y: 18 },
-                      visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.45 },
+                      },
                     }}
                     className="w-full py-3 rounded-xl bg-white/5 border border-white/10 px-4"
                   >
@@ -226,7 +228,7 @@ From retail to service-based businesses, we make payment processing simple and d
                 }}
                 className="text-center font-semibold text-3xl"
               >
-                Common Reasons Business Are Classified High-Risk
+                Common Reasons Business Are Classified Low-Risk
               </motion.h1>
 
               <motion.div
@@ -238,31 +240,37 @@ From retail to service-based businesses, we make payment processing simple and d
               >
                 {[
                   {
-                    title: "Credit Challenges",
-                    text1: "Low personal or business credit",
-                    text2: "can increase perceived risk.",
+                    title: "Processing Restrictions",
+                    text1: "Low-risk businesses still face ",
+                    text2:
+                      "transaction limits, delays, and sudden restrictions from providers.",
                   },
                   {
-                    title: "Subscription & Continuity Billing",
-                    text1: "Recurring models often experience",
-                    text2: "higher dispute rates.",
+                    title: "Limited Payment Flexibility",
+                    text1: "Standard accounts often restrict ",
+                    text2:
+                      "recurring billing, international payments, and scaling needs.",
                   },
                   {
-                    title: "Chargebacks & Refund Volume",
-                    text1: "Frequent disputes or refund activity",
-                    text2: "can trigger risk flags.",
+                    title: "Growth Barriers",
+                    text1: "Higher transaction volumes can trigger ",
+                    text2: "reviews, fund holds, or processing slowdowns.",
                   },
                   {
-                    title: "Free Trials or Promotional Offers",
-                    text1: "Trial-based offers sometimes",
-                    text2: "result in customer disputes.",
+                    title: "Lack of Scalable Solutions",
+                    text1: "Traditional processors lack flexibility,",
+                    text2: "for expanding and fast-growing businesses.",
                   },
                 ].map((item, i) => (
                   <motion.div
                     key={i}
                     variants={{
                       hidden: { opacity: 0, y: 25 },
-                      visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.5 },
+                      },
                     }}
                     className="py-3 rounded-t-xl cursor-pointer"
                   >
