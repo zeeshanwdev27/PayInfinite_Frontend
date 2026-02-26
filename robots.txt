@@ -1,0 +1,15 @@
+# ==========================================
+# 🤖 PayInfinite Robots.txt
+# ==========================================
+
+User-agent: *
+Allow: /
+
+# Prevent crawling system or sensitive paths (if added in future)
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://payinfinite.com/sitemap.xml

@@ -5,3 +5,4 @@
 3. lucide-react
 4. npm i lenis
 5. npm i motion
+6. npm i sweetalert2

@@ -1,0 +1,95 @@
+# =====================================================
+# ✅ PayInfinite React + Vite SPA Routing (.htaccess)
+# Works with createBrowserRouter + direct URL refresh
+# =====================================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ---------------------------------------------
+  # ✅ Serve existing files/folders normally
+  # ---------------------------------------------
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # ---------------------------------------------
+  # ✅ IMPORTANT: Don't rewrite these common files
+  # ---------------------------------------------
+  RewriteRule ^index\.html$ - [L]
+  RewriteRule ^robots\.txt$ - [L]
+  RewriteRule ^sitemap\.xml$ - [L]
+  RewriteRule ^favicon\.ico$ - [L]
+
+  # ---------------------------------------------
+  # ✅ SPA fallback (all routes -> index.html)
+  # /highrisk /lowrisk /aboutus /contactus /privacypolicy /termsandconditions
+  # ---------------------------------------------
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# =====================================================
+# ⚡ Caching (Vite build assets + images + fonts)
+# =====================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images – 1 year
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg  "access plus 1 year"
+  ExpiresByType image/png  "access plus 1 year"
+  ExpiresByType image/gif  "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Fonts – 1 year
+  ExpiresByType font/woff  "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+
+  # JS/CSS – 1 year (Vite hashed files)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # HTML – short cache for updates
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# =====================================================
+# 🗜 Compression (Gzip + Brotli)
+# =====================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css application/javascript application/json
+  BrotliCompressionQuality 5
+</IfModule>
+
+# =====================================================
+# 🔒 Security Headers + Cache-Control
+# =====================================================
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-XSS-Protection "1; mode=block"
+  Header always append X-Frame-Options SAMEORIGIN
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+
+  # ❗ Do not cache HTML (so updates show quickly)
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
+
+  # ✅ Cache static build assets aggressively
+  <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|webp|avif|woff|woff2|ico|mp4)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# =====================================================
+# 🚫 Disable Directory Listing
+# =====================================================
+Options -Indexes

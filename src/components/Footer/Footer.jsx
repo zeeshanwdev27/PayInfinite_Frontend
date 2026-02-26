@@ -1,11 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+
+const SENDMAIL_URL = "https://payinfinite.net/sendmail.php"; // change to your real URL
 
 function Footer() {
+  const [email, setEmail] = useState("");
+  const [sending, setSending] = useState(false);
+
+  const submitFooterEmail = async (e) => {
+    e.preventDefault();
+    if (sending) return;
+
+    const clean = email.trim();
+    if (!clean) {
+      Swal.fire({
+        icon: "warning",
+        title: "Email Required",
+        text: "Please enter your email address.",
+      });
+      return;
+    }
+
+    setSending(true);
+    try {
+      const fd = new FormData();
+      fd.append("form_type", "footer");
+      fd.append("email", clean);
+
+      const res = await fetch(SENDMAIL_URL, {
+        method: "POST",
+        body: fd,
+      });
+
+      const text = (await res.text()).trim();
+
+      if (text === "success") {
+        Swal.fire({
+          icon: "success",
+          title: "Subscribed!",
+          text: "Thanks! You’ve been added successfully.",
+        });
+        setEmail("");
+      } else if (text === "invalid_email") {
+        Swal.fire({
+          icon: "error",
+          title: "Invalid Email",
+          text: "Please enter a valid email address.",
+        });
+      } else if (text === "forbidden_origin") {
+        Swal.fire({
+          icon: "error",
+          title: "Blocked",
+          text: "Your domain is not allowed in CORS. Add it in sendmail.php.",
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Failed",
+          text: "Something went wrong. Please try again.",
+        });
+      }
+    } catch (err) {
+      Swal.fire({
+        icon: "error",
+        title: "Network Error",
+        text: "Could not submit. Please try again.",
+      });
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <div className="relative px-4 sm:px-[15%] py-10 md:py-20 overflow-hidden bg-black">
-
       {/* Bottom Glow */}
       <div className="absolute -bottom-55 left-1/2 -translate-x-1/2 pointer-events-none z-0">
         <div
@@ -23,27 +92,39 @@ function Footer() {
       <div className="relative text-white bg-primary/50 backdrop-blur-2xl rounded-2xl border border-stone-600 p-6 sm:p-8 md:p-10 w-full flex flex-col gap-8">
         {/* Header */}
         <div className="flex flex-col justify-center items-center gap-5 text-center">
-          <h1 className="text-3xl sm:text-4xl semi-bold">Stay Updated with PayInfinite</h1>
+          <h1 className="text-3xl sm:text-4xl semi-bold">
+            Stay Updated with PayInfinite
+          </h1>
 
           <p className="text-xs sm:text-sm text-stone-400 max-w-xl">
-            Powering businesses with secure, reliable, and seamless payment solutions. Whether you're a startup, enterprise, or high-risk businesses, we’ve got you covered.
+            Powering businesses with secure, reliable, and seamless payment
+            solutions. Whether you're a startup, enterprise, or high-risk
+            businesses, we’ve got you covered.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 items-stretch sm:items-center w-full">
+          {/* ✅ FOOTER EMAIL FORM */}
+          <form
+            onSubmit={submitFooterEmail}
+            className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 items-stretch sm:items-center w-full"
+          >
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full sm:max-w-sm border border-white/80 rounded-md px-4 py-2 text-md transition-colors duration-200 focus:outline-none focus:border-blue-400 placeholder:text-white/50"
               placeholder="Enter your email"
             />
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="rounded-2xl primary-btn text-white px-6 py-3 font-semibold hover:opacity-90 transition cursor-pointer w-full sm:w-auto"
+              type="submit"
+              disabled={sending}
+              whileHover={{ scale: sending ? 1 : 1.05 }}
+              whileTap={{ scale: sending ? 1 : 0.95 }}
+              className="rounded-2xl primary-btn text-white px-6 py-3 font-semibold hover:opacity-90 transition cursor-pointer w-full sm:w-auto disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Connect With Us
+              {sending ? "Sending..." : "Connect With Us"}
             </motion.button>
-          </div>
+          </form>
         </div>
 
         <hr className="border border-stone-600" />
@@ -67,24 +148,25 @@ function Footer() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 text-base sm:text-lg gap-8 sm:gap-10">
-
             <div className="flex flex-col">
               <h2 className="text-md font-semibold text-white mb-3">Explore</h2>
               <ul className="space-y-1">
-                <Link to={'/'}>
-                <li className="hover:text-blue-400 cursor-pointer">Home</li>
+                <Link to={"/"}>
+                  <li className="hover:text-blue-400 cursor-pointer">Home</li>
                 </Link>
-                <Link to={'/aboutus'}>
-                <li className="hover:text-blue-400 cursor-pointer">About Us</li>
+                <Link to={"/aboutus"}>
+                  <li className="hover:text-blue-400 cursor-pointer">About Us</li>
                 </Link>
-                <Link to={'/contactus'}>
-                <li className="hover:text-blue-400 cursor-pointer">Contact Us</li>
+                <Link to={"/contactus"}>
+                  <li className="hover:text-blue-400 cursor-pointer">Contact Us</li>
                 </Link>
-                <Link to={'/privacypolicy'}>
-                <li className="hover:text-blue-400 cursor-pointer">Privacy Policy</li>
+                <Link to={"/privacypolicy"}>
+                  <li className="hover:text-blue-400 cursor-pointer">Privacy Policy</li>
                 </Link>
-                <Link to={'/termsandconditions'}>
-                <li className="hover:text-blue-400 cursor-pointer">Terms And Conditions</li>
+                <Link to={"/termsandconditions"}>
+                  <li className="hover:text-blue-400 cursor-pointer">
+                    Terms And Conditions
+                  </li>
                 </Link>
               </ul>
             </div>
@@ -92,15 +174,14 @@ function Footer() {
             <div className="flex flex-col">
               <h2 className="text-md font-semibold text-white mb-3">Services</h2>
               <ul className="space-y-1">
-                <Link to={'/highrisk'}>
-                <li className="hover:text-blue-400 cursor-pointer">High-Risk</li>
+                <Link to={"/highrisk"}>
+                  <li className="hover:text-blue-400 cursor-pointer">High-Risk</li>
                 </Link>
-                <Link to={'/lowrisk'}>
-                <li className="hover:text-blue-400 cursor-pointer">Low-Risk</li>
+                <Link to={"/lowrisk"}>
+                  <li className="hover:text-blue-400 cursor-pointer">Low-Risk</li>
                 </Link>
               </ul>
             </div>
-            
           </div>
         </div>
 
@@ -135,8 +216,6 @@ function Footer() {
             © Copyright 2026 PayInfinite. All Rights Reserved
           </p>
         </div>
-
-
       </div>
     </div>
   );
