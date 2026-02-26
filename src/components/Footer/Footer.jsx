@@ -23,11 +23,10 @@ function Footer() {
       <div className="relative text-white bg-primary/50 backdrop-blur-2xl rounded-2xl border border-stone-600 p-6 sm:p-8 md:p-10 w-full flex flex-col gap-8">
         {/* Header */}
         <div className="flex flex-col justify-center items-center gap-5 text-center">
-          <h1 className="text-3xl sm:text-4xl semi-bold">Join Our Newsletter</h1>
+          <h1 className="text-3xl sm:text-4xl semi-bold">Stay Updated with PayInfinite</h1>
 
           <p className="text-xs sm:text-sm text-stone-400 max-w-xl">
-            The ultimate AI-powered prompt generator. Whether you're a writer,
-            designer, marketer, or just looking for inspiration
+            Powering businesses with secure, reliable, and seamless payment solutions. Whether you're a startup, enterprise, or high-risk merchant, we’ve got you covered.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 items-stretch sm:items-center w-full">
@@ -42,7 +41,7 @@ function Footer() {
               whileTap={{ scale: 0.95 }}
               className="rounded-2xl primary-btn text-white px-6 py-3 font-semibold hover:opacity-90 transition cursor-pointer w-full sm:w-auto"
             >
-              Subscribe
+              Connect With Us
             </motion.button>
           </div>
         </div>

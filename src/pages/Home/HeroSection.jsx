@@ -26,7 +26,8 @@ function HeroSection() {
       {/* Body  */}
       <div className="px-4 sm:px-[6%] lg:px-[10%] rounded-4xl py-8 sm:py-10 lg:p-12 backdrop-blur-[14.4px]">
         {/* grid layout */}
-        <div className="grid lg:grid-cols-[2fr_1.5fr] gap-8 sm:gap-10">
+        <div className="grid lg:grid-cols-[2fr_1.5fr] gap-8 sm:gap-0">
+
           {/* left */}
           <div className="bg-black/50 rounded-2xl h-[260px] sm:h-[360px] lg:h-125 overflow-hidden">
             <video
@@ -50,17 +51,14 @@ function HeroSection() {
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight"
             >
-              Reliable Merchant Accounts
+              Reliable Merchant Accounts for Secure Payment Processing
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="text-sm sm:text-base text-white/70"
             >
-              Accept payments globally with a secure and high-performance
-              merchant account built for modern businesses. From high-risk to
-              low-risk industries, we provide fast approvals, multiple payment
-              options, and stable processing you can depend on.
+              Accept payments seamlessly with merchant account solutions designed for businesses that need secure, stable, and uninterrupted payment processing. PayInfinite provides specialized merchant accounts that allow businesses to process credit cards, debit cards, online payments, recurring transactions, and bank transfers through trusted payment networks — even for industries that face approval challenges with traditional providers.
             </motion.p>
 
             <motion.div
@@ -78,7 +76,7 @@ function HeroSection() {
                 whileTap={{ scale: 0.95 }}
                 className="rounded-xl sm:rounded-l-none sm:rounded-r-xl primary-btn text-white px-6 py-3 font-semibold hover:opacity-90 transition cursor-pointer w-full sm:w-auto"
               >
-                Get A Quote
+                Connect With Us
               </motion.button>
             </motion.div>
 

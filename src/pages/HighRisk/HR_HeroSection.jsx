@@ -128,31 +128,6 @@ function HR_HeroSection() {
               {/* Form Import */}
               <Form />
 
-              <motion.p
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-                }}
-                className="text-sm"
-              >
-                Disclaimer: You agree to receive messages from PayInfinite. This
-                includes SMS messages for account updates, application status,
-                appointment scheduling, reminders, and billing notifications.
-                Message frequency may vary. Text STOP to opt out at any time.
-                View our Privacy Policy and Terms & Conditions for more details.
-              </motion.p>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-                }}
-                className="border p-2 text-md w-full max-w-md mx-auto rounded-md font-semibold primary-btn hover:opacity-90 cursor-pointer"
-              >
-                Get A Quote
-              </motion.button>
             </motion.div>
           </div>
         </div>
