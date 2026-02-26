@@ -267,19 +267,19 @@ export const LR_Faqss = [
 
 export const AboutCards = [
   {
-    icon: ShoppingBag,
-    title: 'Retail Businesses:',
-    description: 'Secure in-store and online payment solutions with competitive rates, fast settlements, and seamless POS integration for stable retail operations.'
+    icon: ShieldAlert,
+    title: 'High-Risk Merchant Accounts',
+    description: 'Specialized merchant account approvals for businesses operating in high-risk or restricted industries. Structured solutions designed to support stable processing, chargeback management, and long-term account continuity.'
   },
   {
-    icon: ChefHat,
-    title: 'Food & Beverage:',
-    description: 'Restaurants, cafés, and food service businesses with stable transaction volume.'
+    icon: ShieldCheck,
+    title: 'Low-Risk Merchant Accounts',
+    description: 'Reliable and cost-effective merchant accounts for standard businesses requiring secure card processing, smooth settlements, and scalable payment infrastructure.'
   },
   {
-    icon: Briefcase,
-    title: 'High-Risk & Specialized Industries:',
-    description: 'Custom merchant account approvals for businesses facing chargebacks, industry restrictions, offshore needs, or prior declines.'
+    icon: CreditCard,
+    title: 'Complete Payment Infrastructure',
+    description: 'End-to-end payment solutions including credit & debit card processing, ACH transactions, recurring billing, payment gateways, and seamless business integrations.'
   },
 ];
 

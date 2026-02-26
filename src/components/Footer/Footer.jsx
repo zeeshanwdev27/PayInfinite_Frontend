@@ -26,7 +26,7 @@ function Footer() {
           <h1 className="text-3xl sm:text-4xl semi-bold">Stay Updated with PayInfinite</h1>
 
           <p className="text-xs sm:text-sm text-stone-400 max-w-xl">
-            Powering businesses with secure, reliable, and seamless payment solutions. Whether you're a startup, enterprise, or high-risk merchant, we’ve got you covered.
+            Powering businesses with secure, reliable, and seamless payment solutions. Whether you're a startup, enterprise, or high-risk businesses, we’ve got you covered.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 items-stretch sm:items-center w-full">
